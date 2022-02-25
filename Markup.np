@@ -1,0 +1,11 @@
+#:import kivy kivy
+
+ScreenManager: 
+
+    Screen: 
+        name: 'menu'
+
+        Label:
+            text: "HEEEEEEEY!"
+            pos: 0, kivy.core.window.Window.size[1] // 2 - 10
+            font: "Times new Roman 10"
