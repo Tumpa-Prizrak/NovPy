@@ -5,7 +5,47 @@ ScreenManager:
     Screen: 
         name: 'menu'
 
+        Image:
+            source: 'images/d&d.jpg'
+            size: kivy.core.window.Window.size[0], kivy.core.window.Window.size[1] * 2
+
+        Button:
+            text: "Start!"
+            size: 150, 150
+            pos: 0, 0
+            size_hint: None, None
+        
+        Button:
+            text: "Settings"
+            size: 150, 150
+            pos: kivy.core.window.Window.size[0] - 150, 0
+            size_hint: None, None
+            on_press: root.current = 'settings'
+
         Label:
-            text: "HEEEEEEEY!"
-            pos: 0, kivy.core.window.Window.size[1] // 2 - 10
-            font: "Times new Roman 10"
+            text: "NovPy Example novel"
+            pos: 0, kivy.core.window.Window.size[1] // 2 - (kivy.core.window.Window.size[1] // 10)
+            font: "Times new Roman"
+            font_size: (kivy.core.window.Window.size[0] + kivy.core.window.Window.size[1]) // 25
+            color: (0, 0, 0)
+    
+    Screen:
+        name: 'settings'
+
+        Image:
+            source: 'images/d&d.jpg'
+            size: kivy.core.window.Window.size
+
+        Label:
+            text: "Settings"
+            pos: 0, kivy.core.window.Window.size[1] // 2 - (kivy.core.window.Window.size[1] // 20)
+            font: "Times new Roman"
+            font_size: (kivy.core.window.Window.size[0] + kivy.core.window.Window.size[1]) // 35
+            color: (1, 1, 1)
+
+        Button:
+            text: "Back"
+            size: 150, 150
+            pos: 0, 0
+            size_hint: None, None
+            on_press: root.current = 'menu'
