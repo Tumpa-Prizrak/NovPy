@@ -14,6 +14,7 @@ ScreenManager:
             size: 150, 150
             pos: 0, 0
             size_hint: None, None
+            on_press: root.current = 'Game'
         
         Button:
             text: "Settings"
@@ -49,3 +50,16 @@ ScreenManager:
             pos: 0, 0
             size_hint: None, None
             on_press: root.current = 'menu'
+    
+    Screen:
+        name: 'Game'
+
+        canvas:
+            Color:
+                rgb: (1, 1, 1)
+            Rectangle:
+                size: 150, 150
+
+        Image:
+            source: 'images/d&d.jpg'
+            size: kivy.core.window.Window.size
